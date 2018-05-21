@@ -4,7 +4,7 @@ import os, sys, subprocess, string, textwrap
 
 if "--help" in sys.argv:
     raise SystemExit("""
-Usage: ./make.py [-i] [--dump]
+Usage: ./make.py [-i] [--dump] [components.dot ...]
     -i: use dot's X11 viewer
     --dump: print compiled source to stdout
 """)
@@ -17,7 +17,16 @@ bulk = """digraph {
     node[style = "filled, rounded"; shape = box];
 """
 top = []
-for name in os.listdir("./src/"):
+
+use_files = []
+for arg in sys.argv[1:]:
+    if arg.startswith("-"): continue
+    use_files += [arg]
+
+if not use_files:
+    use_files = os.listdir("./src/")
+
+for name in use_files:
     if not name.endswith(".dot"): continue
     filename = "./src/" + name
     name = name.replace(".dot", "")
