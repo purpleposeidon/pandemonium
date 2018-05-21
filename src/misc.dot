@@ -2,4 +2,4 @@
 "tfw no gf";
 "cost disease";
 
-"ugliness" -> subgraph { "reduced earnings" -> "tfw no gf" };
+"ugliness" -> "reduced earnings" -> "tfw no gf";
