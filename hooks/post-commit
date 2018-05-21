@@ -1,5 +1,6 @@
 #!/bin/sh
 
-./make.py && git add ./all.png
-#&& git commit --amend
-echo "Run git commit --amend?"
+if $GIT_HOOK_RECURSE; then exit; fi
+export GIT_HOOK_RECURSE=1
+
+./make.py && git add ./all.png && git commit --amend
