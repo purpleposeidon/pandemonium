@@ -155,20 +155,18 @@ if "--dump" in sys.argv:
     for (i, line) in enumerate(out.splitlines()):
         print(i + 1, "\t", line)
 
+def run_dot(args):
+    dot = subprocess.Popen(args, stdin=subprocess.PIPE)
+    dot.stdin.write(bytes(out, "utf-8"))
+    dot.stdin.close()
+
+x11 = ["dot", "-Txlib"]
+png = ["dot", "-Tpng", "-o", "all.png"]
+
 viewer = "-i" in sys.argv
 if viewer:
     os.system("killall dot")
-    dot = subprocess.Popen(["dot", "-Txlib"], stdin=subprocess.PIPE)
+    run_dot(png)
+    run_dot(x11)
 else:
-    dot = subprocess.Popen(["dot", "-Tpng", "-o", "all.png"], stdin=subprocess.PIPE)
-
-dot.stdin.write(bytes(out, "utf-8"))
-dot.stdin.close()
-
-if viewer:
-    pass
-else:
-    if dot.wait() == 0:
-        #os.system("killall display")
-        #os.system("display ./all.png")
-        pass
+    run_dot(png)
