@@ -1,0 +1,5 @@
+#!/bin/sh
+
+./make.py && git add ./all.png
+#&& git commit --amend
+echo "Run git commit --amend?"
