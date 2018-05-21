@@ -1,5 +1,12 @@
 node[fillcolor = pink];
 "agriculture" -> "processed food" -> "soft food diet" -> "craniofacial dystrophy";
 "hygeine hypothesis" -> "congestion" -> "habituated mouth breathing";
-"habituated mouth breathing" -> "poor tongue posture" -> "craniofacial dystrophy" -> { "ugliness"; "snoring & sleep apnea" };
-"snoring & sleep apnea" -> { "adhd", "obesity", "death" };
+"habituated mouth breathing" -> {
+    "teeth out of contact";
+    "dry mouth";
+    "poor tongue posture" -> "craniofacial dystrophy";
+};
+"craniofacial dystrophy" -> { "snoring", "ugliness" };
+"snoring" [label = "Snoring, then sleep apnea"];
+"snoring" -> { "obesity", "early death" };
+"snoring" -> "adhd" [label = "energy imbalance?"];

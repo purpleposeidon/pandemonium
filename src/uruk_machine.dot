@@ -1,17 +1,36 @@
+// https://samzdat.com/the-uruk-series/
+
 node[fillcolor = green];
 
 "Taylorism" -> "institutional scartissue";
 "narcissism" -> "escalating shallow signalling";
-"economic prejudice";
-"double-motion";
-@"mass movements" "optimize for frustration"
-"high modernism";
-"cadastral action";
+@"economic prejudice" "Money is easy to measure"
+"economic prejudice" -> "epistemis";
+"high modernism" -> subgraph {
+    "economic prejudice";
+    "Taylorism" -> subgraph {
+        "double-motion";
+        "weakened individual/cultural metis" -> "narcissism";
+    };
+    "epistemis";
+}
+@"high modernism" "cadastral action"
 
-"epistemis";
-"metis" -> subgraph {
-    "individual"; "cultural"; "evolutionary"
-};
-"horseshoe theory";
+@"double-motion" "State wants to do good thing.
+
+State's implementation actually ruinous for the locals, who resist.
+
+State can't comprehend local's resistance, assumes they're crazy.
+
+If locals win, they still lost metis/competence.
+
+If locals lose, it validates the State's perceptions.
+
+(“Seeing Like a State”)
+"
+@"weakened metis" "metis: individual/cultural/evolutionary inexpressible in language epistemis language"
+@"mass movements" "optimize for frustration"
+
+@"horseshoe theory" "similar people drawn away from the norm in different directions, not 'the radicals are the same'"
 
 
