@@ -1,0 +1,20 @@
+/*
+// This is just a syntax example.
+
+node[fillcolor = yellow]; // set a color for the subgraph
+
+// this declares some nodes.
+"bananas" "bell peppers";
+
+// this connects two nodes. They are created automatically.
+"basic" -> "basic bitches";
+
+// nodes can be mentioned repeatedly
+"basic bitch takes" -> "bell peppers";
+
+// This adds a comment to a label. Keep it short?
+"bell peppers" -> "basic" [xlabel = "bad"]
+
+// This adds a comment to a node (This is not standard syntax!)
+@"basic" "If your sincerely held beliefs are indistinguishable from trolling, then your beliefs are basic."
+*/

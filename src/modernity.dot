@@ -1,0 +1,11 @@
+node[fillcolor = "lightblue"];
+
+"urban living" -> "hygeine hypothesis";
+@"hygeine hypothesis" "allergen sensitivity"
+
+"agriculture";
+"industrial revolution";
+"globalism";
+"environmental destruction";
+"consumerism";
+
